@@ -1,4 +1,15 @@
-class unattended_upgrades::install {
+class unattended_upgrades::install(
+  $allowd_origins,
+  $package_blacklist,
+  $auto_fix_interrupted_dpkg,
+  $minimal_steps,
+  $install_on_shutdown,
+  $mail,
+  $mail_only_on_error,
+  $remove_unused_dependencies,
+  $automatic_reboot,
+  $dl_limit,
+){
   package { 'unattended-upgrades':
     ensure => 'present',
   }
