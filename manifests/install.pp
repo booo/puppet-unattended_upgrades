@@ -5,7 +5,7 @@ class unattended_upgrades::install {
   file { '/etc/apt/apt.conf.d/50unattended-upgrades':
     ensure  => present,
     content => template('unattended_upgrades/50unattended-upgrades.erb'),
-    require => Package['unattended_upgrades'],
+    require => Package['unattended-upgrades'],
   }
   file { '/etc/apt/apt.conf.d/20auto-upgrades':
     ensure  => present,
