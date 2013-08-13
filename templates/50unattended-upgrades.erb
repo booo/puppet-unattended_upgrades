@@ -49,6 +49,6 @@ Unattended-Upgrade::Automatic-Reboot "<%= @automatic_reboot %>";
 
 // Use apt bandwidth limit feature, this example limits the download
 // speed to 70kb/sec
-<% if @dl_limit and @dl_limt != 0 -%>
+<% if @dl_limit and @dl_limit != 0 -%>
 Acquire::http::Dl-Limit "<%= @dl_limit %>";
 <% end -%>
